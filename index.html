@@ -66,9 +66,9 @@
 				<div id="vecto1">
 					<img src="Media\1.PNG" />
 					<p>Chọn K điểm làm Tâm cụm:</p>
-					<img src="https://keep.google.com/u/0/media/v2/1YyDZJJF2AhAdhMHvtct-3S0Opj-ebBuIjtzXpSjnGppiAPxXIuTO8peDwAXEWEo/1on-E6woSNEJd8kzJ0kyM5N5Al3xHNCSwBnGh2V2Trr8Lsa73uwlW5VDAYVnyy6g?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=341" />
+					<img src="Media\2.PNG" />
 					<p>Gán các điểm dữ liệu đến tâm dữ liệu gần nhất:</p>
-					<img src="https://keep.google.com/u/0/media/v2/1Ph36go8B2HuH3quBjWPrOg6VZy6vqBDY7MaM3r_bW-XFGqueZWYL6lFwt0vVMg/1-K8ZmbTPG3gq0YFNHTTdmcDqrdfS6dw9K1TO7VI7I7yRCJcKyd9cWGS7lAp_yg?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=393" />
+					<img src="Media\3.PNG" />
 				</div>
 				<div id="yt1">
 					<p>Di chuyển các tâm dữ liệu đến tọa độ trung bình của các điểm dữ liệu gán vào nó</p>
@@ -83,11 +83,11 @@
 				<p>2.2.2 Vấn đề khởi tạo vị trí của k điểm</p>
 				<p>Tương tự, việc khởi tạo vị trí của k điểm cũng quan trọng không kém. Hai vị trí khởi tạo khác nhau của k điểm có thể cho ra 2 kết quả hoàn toàn khác nhau.</p>
 				<div class="img1">
-					<img src="https://keep.google.com/u/0/media/v2/1eNBA7LQFhJMqRsNsu1nZ8k9Bw-BMDwU2cdxhmNHaSQ_e8VSLJow60s2gh7oRXiI/1_mPtqm1ylxdHRlWt60wiTPSeXhOBwmLlff1r3wqUE8v9AXC_HfWZLbJSO6bzRCs?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=492" />
+					<img src="Media\7.PNG" />
 				</div>
 				<p>Nhìn vào sự biểu diễn điểm dữ liệu phía trên, con người có thể tính toán ra ngay được k=3, và 3 tâm cụm nằm trong ba vùng dữ liệu được định sẵn khá “rõ ràng”.</p>
 				<div class="img1">
-					<img src="https://keep.google.com/u/0/media/v2/1bkm3oN-bKfYXYGOqdTkPuW6FcoTRLYywsJPvTIxi4xgQRWEb7A9ChRnjEnQ5Ig/1wvp4-ltUc1Ib48_pry413yD4R5cstdU0xlmJLpjxe4CZNZiRVw6rX2qimzhzHoA?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=648" />
+					<img src="Media\8.PNG" />
 				</div>
 				<p>Tuy nhiên, khi khởi tạo không chính xác, máy tính sẽ cho ra những kết quả không mong muốn. Hơn nữa, không phải lúc nào chúng ta cũng có thể nhìn ra chính xác được những điểm khởi tạo hợp lí.</p>
 				<p>2.3 Giải quyết vấn đề bằng thuật toán:</p>
@@ -99,22 +99,22 @@
 				<p>Ý tưởng của thuật toán này như sau. Bộ dữ liệu ban đầu sẽ được phân thành k nhóm. Với mỗi nhóm sẽ tính cái gọi là centroid (tâm ngẫu nhiên) tương ứng rồi tính tổng khoảng cách của tất cả các quan sát thuộc nhóm này đến centroid ở trên và tổng này gọi là WSS</p>
 				<p>Vì mục tiêu của thuật toán phân cụm là phân chia toàn bộ các quan sát của bộ dữ liệu ban đầu thành k cụm khác nhau sao cho các quan sát thuộc cùng một cụm là tương đồng nhất với nhau có thể, hay TWSS nhỏ nhất có thể, và số điểm k không quá lớn, nên ta có thể dùng biểu diễn đồ thị của WSS phụ thuộc vào số điểm k. Dựa vào độ dốc của đồ thị và chọn điểm k thích hợp.</p>
 				<div class="img1">
-					<img src="https://keep.google.com/u/0/media/v2/1Y1vywWKVrXlUfXPhVhF83iTc7qZUyinY1K2Jlegrwk9r5HBK7nosxZXsMPwk4A/1K-10W0wxTkuZRb4Rc4gYB4I1yjbViF998fzK0v8gW4MHccak3gNkU033O-NME_s?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=633" />
+					<img src="Media\6.PNG" />
 				</div>
 				<p>Với minh họa bên trên, ta có thể thấy, khi k>3 thì  WSS của hệ giảm không đáng kể, nên ta sẽ chọn k=3 cho trường hợp này.</p>
 				<p>Tuy nhiên, trong nhiều trường hợp, số k phù hợp nhất không thể được xác định rõ ràng bằng phương pháp Elbow, cho nên ta tới với một phương pháp khác, phương pháp Silhouette.</p>
 				<p><b>Phương pháp Silhouette</b></p>
 				<p>Phương pháp Silhouette tính toán sự tương đồng của các điểm trong cùng một cụm, biểu thị qua một giá trị gọi là Điểm Silhouette, biến thiên từ -1 tới 1, được tính toán theo công thức như sau.</p>
 				<p>a(i) là giá trị trung bình khoảng cách của một điểm i tới các điểm còn lại trong cùng một cụm.</p>
-				<img src="https://keep.google.com/u/0/media/v2/1Ya_eB_SXxf9bv0RU1QY3RfRf7R6yuHeYYw1FtEhjyW4OmbtV3hxJf-vN0QhCXyM/1jObgzW54l5ubtQOjXagWPv8OcIpsR_mkMDEEESEK3F66u2Fe0Pst3l3Mr-CR?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=200" />
+				<img src="Media\16.PNG" />
 				<div id="bi">
 					<p>b(i) là khoảng cách trung bình nhỏ nhất tới các cụm khác.</p>
 				</div>
-				<img src="https://keep.google.com/u/0/media/v2/1br8jGMp8bzWDQ2xvtOF57s4p9TLaFGV5TXhNlZ3nLCc2dmXR-6EBk2zbJvLJFQ/11dIfW0ZD4oKl_ovyPMnwHwLB1x-zhdxYuUMhaAYs0EIncswsPexnYze9GYZF7Jw?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=200" />
+				<img src="Media\17.PNG" />
 				<p>Điểm Silhouette sẽ tính bằng S(i) theo công thức: </p>
-				<img src="https://keep.google.com/u/0/media/v2/1sswAWQjztSHYqSnPF4u-d6JzgvFA-Ny7CzwFahqNgiMOCZNvbBFmRiMjuhqGiA/1-qsq5xbWEJKD3I-WEjzFHBKx3t7uklHabJQX-XPBHH6W4meOcBIjJB4GlnYKjg?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=250" />
+				<img src="Media\18.PNG" />
 				<p>Với k từ 1 tới 10 ta có đồ thị biểu diễn giá trị điểm Silhouette theo k như sau:</p>
-				<img src="https://keep.google.com/u/0/media/v2/1GlQ7MZWa75rBz3qeD7el-HPPp0yoXAvg1XpVM6peOyJDc3BnB47H0Lbq8o-l2bQ/1vZUSapHU5Om55dE8oeCQQp0PzQbN7dAx_0to4A4LkLS1zlnxyAxsZLMtEFQPFQ?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=673" />
+				<img src="Media\6.PNG" />
 				<p>2.3.2 Khởi tạo điểm k:</p>
 				<p>Ta dùng phương pháp k-means++</p>
 				<p>Ý tưởng của phương pháp này là chọn 1 điểm khởi tạo tâm cụm ban đầu ngẫu nhiên tại một điểm dữ liệu, sau đó k-1 điểm dữ liệu tiếp theo khởi tạo tại điểm có khoảng cách lớn nhất so với các tâm cụm còn lại.</p>
@@ -123,23 +123,23 @@
 				<p>Cohn 1 tâm cụm ngẫu nhiên.</p>
 				<p>(Giả sử ta muốn khởi tạo k=3)</p>
 				<div class="img1">
-					<img src="https://keep.google.com/u/0/media/v2/1T2fF5p8Uvpbpbf7wl6ztFdeaKblZ_mMQsWXSekw9XvYOk9C6GFn1xF56aCkLsA/1bh_LPPV5Q2s87eAcaRoPtlxE3HXvuMik3jAgfwJx4Wzmh3-hjBaSZePtlKXBMw?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=425" />
+					<img src="Media\11.PNG" />
 				</div>
 				<p>Tính toán khoảng cách từ tâm tới cái điểm dữ liệu</p>
 				<div class="img1">
-					<img src="https://keep.google.com/u/0/media/v2/1s1SnI5RAzilCdmyEBQIZNWux0yYWIljR7bfiAlL3KkJHwk8r9wnvyMuyDZ5IfFQ/14WEzUo8OuBts27F43O7WH3kba5tlCkoeLsCfkpXZL5wsH7p_5uisUoNB16fJjqU?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=530" />
+					<img src="Media\12.PNG" />
 				</div>
 				<p>Chọn điểm cách xa nhất của tâm cụm tiếp theo</p>
 				<div class="img1">
-					<img src="https://keep.google.com/u/0/media/v2/17euiR1HMbA4lcB08T2cw0oMKyJGPNplSdPIzSJNK1cdMNCpyfXy9t0nc-kobmfs/1QxIlaoXeCSk47HuNfB7mlwPepuG1wYIFZlGW_56_2_g0GIQQWaowjFyNxYMPvtQ?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=457" />
+					<img src="Media\13.PNG" />
 				</div>
 				<p>Tiếp tục tính khoảng cách từ tâm cụm tới các điểm dữ liệu gán vào nó</p>
 				<div class="img1">
-					<img src="https://keep.google.com/u/0/media/v2/1mivZzJjH-LqrlfIIzcXb_Uqy6oat03VUw7gxm6CX_Mczedq6t_SkOovS1XOIrjo/16lZlxOPkGnAt7YG70aRR-OeVPcItGcE7hshqD_aIktFVr6uQWS3U2OZGzYeJlg?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=415" /> 
+					<img src="Media\14.PNG" /> 
 				</div>
 				<p>Chọn được điểm khởi tạo cuối cùng theo quy tắc trên và bắt đầu quá trình k-means clutstering</p>
 				<div class="img1">
-					<img src="https://keep.google.com/u/0/media/v2/1cSgi0Jv9l4nmCEjIDttc6mwaIfqOKlBPtqNkqB0nbGGLAZSjNt5JURIUZQFoylI/1mjSMV8TS9yBYqLlfHJL0L0y2Tj9RMqfIzQZJwfZYcBxnzA-IFeZMLujuKI9oKHk?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=450" />
+					<img src="Media\15.PNG" />
 				</div>
 				<p>3. Ví dụ minh họa</p>
 				<p>Source: Vui lòng bấm vào <a href="https://rstudio-pubs-static.s3.amazonaws.com/323353_31f9a891bbf24fc0b42ff835344c2d1f.html" target="_blank">đây</a></p>
