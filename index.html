@@ -99,7 +99,7 @@
 				<p>Ý tưởng của thuật toán này như sau. Bộ dữ liệu ban đầu sẽ được phân thành k nhóm. Với mỗi nhóm sẽ tính cái gọi là centroid (tâm ngẫu nhiên) tương ứng rồi tính tổng khoảng cách của tất cả các quan sát thuộc nhóm này đến centroid ở trên và tổng này gọi là WSS</p>
 				<p>Vì mục tiêu của thuật toán phân cụm là phân chia toàn bộ các quan sát của bộ dữ liệu ban đầu thành k cụm khác nhau sao cho các quan sát thuộc cùng một cụm là tương đồng nhất với nhau có thể, hay TWSS nhỏ nhất có thể, và số điểm k không quá lớn, nên ta có thể dùng biểu diễn đồ thị của WSS phụ thuộc vào số điểm k. Dựa vào độ dốc của đồ thị và chọn điểm k thích hợp.</p>
 				<div class="img1">
-					<img src="Media\6.PNG" />
+					<img src="Media\5.PNG" />
 				</div>
 				<p>Với minh họa bên trên, ta có thể thấy, khi k>3 thì  WSS của hệ giảm không đáng kể, nên ta sẽ chọn k=3 cho trường hợp này.</p>
 				<p>Tuy nhiên, trong nhiều trường hợp, số k phù hợp nhất không thể được xác định rõ ràng bằng phương pháp Elbow, cho nên ta tới với một phương pháp khác, phương pháp Silhouette.</p>
